@@ -1,0 +1,11 @@
+TERMINAL 1
+cd SageMaker
+source miniconda/bin/activate
+cd stable-diffusion-webui
+python launch.py --no-half --xformers
+
+
+TERMINAL 2
+cd SageMaker
+source miniconda/bin/activate
+ngrok http http://127.0.0.1:7860
